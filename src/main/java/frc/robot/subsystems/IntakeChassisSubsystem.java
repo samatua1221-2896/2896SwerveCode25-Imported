@@ -14,13 +14,13 @@ public class IntakeChassisSubsystem extends SubsystemBase {
 
    public void dropChassis()
    {
-        // if switched to smaller motor, change to new voltage
+        // double check the voltage of this, don't want to ruin the intake when testing the motor
         chassisMotor.setVoltage(12);
    }
 
   public void liftChassis()
    {
-        // if switched to smaller motor, change to new voltage
+        // double check the voltage of this, don't want to ruin the intake when testing the motor
         chassisMotor.setVoltage(-12);
    }
 

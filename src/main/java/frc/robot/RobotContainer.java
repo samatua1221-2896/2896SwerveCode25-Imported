@@ -47,7 +47,6 @@ public class RobotContainer {
   //The entire swerve subsystem; all math and inverse kinematics are run through here
   private final SwerveSubsystem drivebase = new SwerveSubsystem();
 
-  //[REDUNDANT] Intake subsytem was what controlled the usage of the Galaxy Gobbler intake and outake system, used
   //a small motor and VistorSP to control the wheels
   private final IntakeSubsystem m_IntakeSubsystem = new IntakeSubsystem();
 
