@@ -58,13 +58,6 @@ public class DefaultDrive extends Command {
     double strafe = m_driverController.getLeftX();
     double rotation = m_driverController.getRightX();
 
-    Trigger slowMode = m_driverController.leftBumper();
-
-    if (slowMode != null) {
-      forward  *= 0.5;
-      strafe *= 0.5;
-      rotation *= 0.5;
-    }
 
     m_SwerveSubsystem.allowSwervedrive(forward, strafe, rotation, true);
 
