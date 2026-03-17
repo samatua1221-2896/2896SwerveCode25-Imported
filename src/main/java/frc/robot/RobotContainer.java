@@ -72,8 +72,44 @@ public class RobotContainer {
       new CommandJoystick(OperatorConstants.kOperatorJoystickPort);
 
 
+public RobotContainer(){
 
-SwerveInputStream driveAngularvelocity = SwerveInputStream.of(drivebase.getSwervedrive(),
+  NamedCommands.registerCommand("exampleCommand", m_ShooterSubsystem.shoot());
+
+  // Do all other initialization
+  configureButtonBindings();
+  }
+  
+  public void configureButtonBindings() {
+    // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
+    new Trigger(m_exampleSubsystem::exampleCondition)
+        .onTrue(new DefaultDrive(drivebase));
+
+    // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
+    // cancelling on release.
+
+    //This controls the motor that is attached to the compression wheels
+    m_operatorJoystick.button(2).whileTrue(m_IntakeSubsystem.intakeCommand());
+    m_operatorJoystick.button(8).whileTrue(m_IntakeSubsystem.reverseIntakeCommand());
+
+    //This controls the motor that shoots the ball
+    m_operatorJoystick.button(1).whileTrue(m_ShooterSubsystem.shoot());
+    m_operatorJoystick.button(7).whileTrue(m_ShooterSubsystem.reverseShoot());
+
+    //Make the buttons to lower and lift the intakeChassis
+    m_operatorJoystick.button(3).whileTrue(m_IntakeChassisSubsystem.drop());
+    m_operatorJoystick.button(5).whileTrue(m_IntakeChassisSubsystem.lift());
+
+    //Controls for the hypothetical climb
+    m_operatorJoystick.button(12).whileTrue(m_ClimbSubsystem.climbCommand());
+    m_operatorJoystick.button(10).whileTrue(m_ClimbSubsystem.lowerCommand());
+   
+  }
+  
+
+  
+  
+  SwerveInputStream driveAngularvelocity = SwerveInputStream.of(drivebase.getSwervedrive(),
                                                            () -> m_driverController.getLeftY() * -1,
                                                            () -> m_driverController.getLeftX() * -1)
                                                           .withControllerRotationAxis(m_driverController::getRightX)
@@ -124,35 +160,7 @@ Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDir
    * PS4} controllers or {@link edu.wpi.first.wpilibj2.command.button.CommandJoystick Flight
    * joysticks}.
    */
-  private void configureBindings() {
-    // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
-    new Trigger(m_exampleSubsystem::exampleCondition)
-        .onTrue(new DefaultDrive(drivebase));
-
-    // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
-    // cancelling on release.
-
-    //Change the methods, not using load or purge
-    
-
-
-    //This controls the motor that is attached to the compression wheels
-    m_operatorJoystick.button(2).whileTrue(m_IntakeSubsystem.intakeCommand());
-    m_operatorJoystick.button(8).whileTrue(m_IntakeSubsystem.reverseIntakeCommand());
-
-    //This controls the motor that shoots the ball
-    m_operatorJoystick.button(1).whileTrue(m_ShooterSubsystem.shoot());
-    m_operatorJoystick.button(7).whileTrue(m_ShooterSubsystem.reverseShoot());
-
-    //Make the buttons to lower and lift the intakeChassis
-    m_operatorJoystick.button(3).whileTrue(m_IntakeChassisSubsystem.drop());
-    m_operatorJoystick.button(5).whileTrue(m_IntakeChassisSubsystem.lift());
-
-    //Controls for the hypothetical climb
-    m_operatorJoystick.button(12).whileTrue(m_ClimbSubsystem.climbCommand());
-    m_operatorJoystick.button(10).whileTrue(m_ClimbSubsystem.lowerCommand());
-   
-  }
+  
 
   
 
