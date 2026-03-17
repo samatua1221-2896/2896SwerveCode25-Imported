@@ -136,7 +136,7 @@ Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDir
     
 
 
-    //[REDUNDANT] This controls the motor that is attached to the compression wheels
+    //This controls the motor that is attached to the compression wheels
     m_operatorJoystick.button(2).whileTrue(m_IntakeSubsystem.intakeCommand());
     m_operatorJoystick.button(8).whileTrue(m_IntakeSubsystem.reverseIntakeCommand());
 
