@@ -10,17 +10,15 @@ import frc.robot.subsystems.ClimbSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.IntakeChassisSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
-//import frc.robot.subsystems.LiftSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.SwerveSubsystem;
-//import frc.robot.subsystems.WinchSubsystem;
 import swervelib.SwerveInputStream;
 
 //import org.ejml.data.FScalar;
 //import org.ejml.dense.block.linsol.chol.CholeskyOuterSolver_DDRB;
 
-//import com.pathplanner.lib.auto.AutoBuilder;
-//import com.pathplanner.lib.auto.NamedCommands;
+import com.pathplanner.lib.auto.AutoBuilder;
+import com.pathplanner.lib.auto.NamedCommands;
 import com.pathplanner.lib.commands.PathPlannerAuto;
 
 //import edu.wpi.first.wpilibj.RobotBase;
@@ -39,6 +37,8 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
+
+  
   // The robot's subsystems and commands are defined here...
 
   //Example subsystem is the example already given in YAGSL code; .java file inside of subsystem folder
@@ -154,6 +154,8 @@ Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDir
    
   }
 
+  
+
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *
@@ -161,14 +163,11 @@ Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDir
    */
   public Command getAutonomousCommand(String pathName) {
     // An example command will be run in autonomous
+  
 
     //Autos are run using PathPlanner, code redirects to the application
     return new PathPlannerAuto(pathName);
-
-
   }
-
-
 
 
 }
