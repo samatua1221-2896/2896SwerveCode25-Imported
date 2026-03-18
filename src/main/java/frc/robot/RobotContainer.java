@@ -73,8 +73,10 @@ public class RobotContainer {
 
 public RobotContainer(){
 
-  NamedCommands.registerCommand("exampleCommand", m_ShooterSubsystem.shoot());
-
+  NamedCommands.registerCommand("shoot", m_ShooterSubsystem.shootAuto());
+  NamedCommands.registerCommand("dropIntake", m_IntakeChassisSubsystem.dropAuto());
+  NamedCommands.registerCommand("intake", m_IntakeSubsystem.intakeAuto());
+  
   // Do all other initialization
   configureButtonBindings();
   }

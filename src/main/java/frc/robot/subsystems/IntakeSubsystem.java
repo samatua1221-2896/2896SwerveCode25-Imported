@@ -46,6 +46,14 @@ public class IntakeSubsystem extends SubsystemBase
     this);
   }
 
+  public Command intakeAuto() {
+    return Commands.startEnd(
+        () -> runIntake(),
+        this::stopIntake,
+        this
+    ).withTimeout(18.0);
+}
+
    @Override
   public void simulationPeriodic() {
     // This method will be called once per scheduler run during simulation

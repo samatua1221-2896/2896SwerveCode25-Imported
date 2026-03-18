@@ -10,6 +10,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
@@ -21,7 +23,7 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
-  private ShuffleboardTab driverTab = Shuffleboard.getTab("Driver");
+  //private ShuffleboardTab driverTab = Shuffleboard.getTab("Driver");
 
   private SendableChooser<String> autoChooser = new SendableChooser<>();
   private String selectedAuto;
@@ -67,7 +69,8 @@ public class Robot extends TimedRobot {
     autoChooser.addOption("BlueStartRight", "BlueStartRight");
     autoChooser.addOption("BlueStartLeft", "BlueStartLeft");
     
-    driverTab.add("Auto Mode", autoChooser);
+    //driverTab.add("Auto Mode", autoChooser);
+    SmartDashboard.putData("Auto Mode", autoChooser);
   }
 
   @Override
@@ -77,6 +80,11 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     selectedAuto = autoChooser.getSelected();
+    if (selectedAuto == null){
+      selectedAuto = "RedStartMiddle";
+    }
+
+
     System.out.println("Selected Auto: " + selectedAuto);
 
     m_autonomousCommand = m_robotContainer.getAutonomousCommand(selectedAuto);

@@ -45,4 +45,12 @@ public Command lift (){
   );
 }
 
+public Command dropAuto() {
+  return Commands.startEnd(
+    () -> dropChassis(),
+    this::stopChassis,
+    this
+  ).withTimeout(0.5);
+}
+
 }

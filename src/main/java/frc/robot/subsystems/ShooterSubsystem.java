@@ -56,6 +56,14 @@ public class ShooterSubsystem extends SubsystemBase
     this);
   }
 
+  public Command shootAuto() {
+    return Commands.startEnd(
+        () -> runShooter(),
+        this::stopShooter,
+        this
+    ).withTimeout(3.0);
+}  
+
 
    @Override
   public void simulationPeriodic() {

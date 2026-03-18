@@ -3,35 +3,79 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 7.7982184655396605,
-        "y": 4.0526918075422635
+        "x": 1.6302948717948724,
+        "y": 7.372294871794873
       },
       "prevControl": null,
       "nextControl": {
-        "x": 8.658102392154088,
-        "y": 3.7471694968885148
+        "x": 3.582748589811186,
+        "y": 7.057775114214456
       },
       "isLocked": false,
-      "linkedName": "Middle of Field"
+      "linkedName": "Left of Blue Depot"
     },
     {
       "anchor": {
-        "x": 6.111599479843952,
-        "y": 5.562392717815344
+        "x": 6.4064629388816625,
+        "y": 6.800819245773733
       },
       "prevControl": {
-        "x": 5.877971610597941,
-        "y": 5.473409468203023
+        "x": 5.502219213013353,
+        "y": 7.982515603119731
+      },
+      "nextControl": {
+        "x": 7.122360639342953,
+        "y": 5.865259859884569
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.689531859557865,
+        "y": 4.2296098829648905
+      },
+      "prevControl": {
+        "x": 6.23859460754852,
+        "y": 4.931086517723924
+      },
+      "nextControl": {
+        "x": 6.9661852805886815,
+        "y": 3.7992486521849376
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.7982184655396605,
+        "y": 4.0526918075422635
+      },
+      "prevControl": {
+        "x": 7.443011093444568,
+        "y": 3.938061440907241
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Front of Blue Left Bump"
+      "linkedName": "Middle of Field"
     }
   ],
-  "rotationTargets": [],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 3.0,
+      "rotationDegrees": 0.0
+    }
+  ],
   "constraintZones": [],
   "pointTowardsZones": [],
-  "eventMarkers": [],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.0,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
   "globalConstraints": {
     "maxVelocity": 4.5,
     "maxAcceleration": 3.5,
@@ -42,7 +86,7 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 180.0
+    "rotation": 0.0
   },
   "reversed": false,
   "folder": "BlueStartLeftCollect",
@@ -50,5 +94,5 @@
     "velocity": 0,
     "rotation": 0.0
   },
-  "useDefaultConstraints": true
+  "useDefaultConstraints": false
 }

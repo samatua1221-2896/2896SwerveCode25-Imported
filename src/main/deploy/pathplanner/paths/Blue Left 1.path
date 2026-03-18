@@ -3,69 +3,32 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.5467141162514837,
-        "y": 7.3434519572953745
+        "x": 3.6187179487179497,
+        "y": 7.372294871794873
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.850367440505307,
-        "y": 7.363740613217115
+        "x": 4.189840340307572,
+        "y": 7.371360002542879
       },
       "isLocked": false,
-      "linkedName": null
+      "linkedName": "Back of Blue Left Trench"
     },
     {
       "anchor": {
-        "x": 6.4064629388816625,
-        "y": 6.800819245773733
+        "x": 1.6302948717948724,
+        "y": 7.372294871794873
       },
       "prevControl": {
-        "x": 5.74515552741797,
-        "y": 7.598864744677804
-      },
-      "nextControl": {
-        "x": 7.265284844780463,
-        "y": 5.7644193136366
-      },
-      "isLocked": false,
-      "linkedName": null
-    },
-    {
-      "anchor": {
-        "x": 6.689531859557865,
-        "y": 4.2296098829648905
-      },
-      "prevControl": {
-        "x": 6.446147372941454,
-        "y": 4.672781458224809
-      },
-      "nextControl": {
-        "x": 6.8187212170658045,
-        "y": 3.9943728229962936
-      },
-      "isLocked": false,
-      "linkedName": null
-    },
-    {
-      "anchor": {
-        "x": 7.7982184655396605,
-        "y": 4.0526918075422635
-      },
-      "prevControl": {
-        "x": 7.548282636849839,
-        "y": 4.058355864139114
+        "x": 1.349035262712822,
+        "y": 7.368838159047171
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Middle of Field"
+      "linkedName": "Left of Blue Depot"
     }
   ],
-  "rotationTargets": [
-    {
-      "waypointRelativePos": 3.0,
-      "rotationDegrees": 0.0
-    }
-  ],
+  "rotationTargets": [],
   "constraintZones": [],
   "pointTowardsZones": [],
   "eventMarkers": [],
