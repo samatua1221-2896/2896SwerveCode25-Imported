@@ -170,7 +170,6 @@ Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDir
    */
   public Command getAutonomousCommand(String pathName) {
     // An example command will be run in autonomous
-  
 
     //Autos are run using PathPlanner, code redirects to the application
     return new PathPlannerAuto(pathName);
