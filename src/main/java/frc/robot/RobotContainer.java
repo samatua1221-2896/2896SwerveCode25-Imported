@@ -59,7 +59,6 @@ public class RobotContainer {
   //Controls the Chassis for the intake
   private final IntakeChassisSubsystem m_IntakeChassisSubsystem = new IntakeChassisSubsystem();
  
-
   // Replace with CommandPS4Controller or CommandJoystick if needed
 
   //Xbox controls the swerve drive base
@@ -72,13 +71,16 @@ public class RobotContainer {
 
 
 public RobotContainer(){
-
   NamedCommands.registerCommand("shoot", m_ShooterSubsystem.shootAuto());
   NamedCommands.registerCommand("dropIntake", m_IntakeChassisSubsystem.dropAuto());
   NamedCommands.registerCommand("intake", m_IntakeSubsystem.intakeAuto());
   
   // Do all other initialization
   configureButtonBindings();
+
+  //Adding this line of code according to AI, need to check if this will actually
+  //make the robot move; robot did not move as of last test 3/18 morning
+  drivebase.setDefaultCommand(driveFieldOrientedAngularVelocity);
   }
   
   public void configureButtonBindings() {
