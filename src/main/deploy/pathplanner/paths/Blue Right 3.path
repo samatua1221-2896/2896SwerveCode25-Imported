@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.7466282051282063,
-        "y": 7.442064102564103
+        "x": 7.7982184655396605,
+        "y": 4.0526918075422635
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.317750596717829,
-        "y": 7.441129233312109
+        "x": 8.671093762086194,
+        "y": 4.420636234533201
       },
       "isLocked": false,
-      "linkedName": "Back of Blue Left Trench"
+      "linkedName": "Middle of Field"
     },
     {
       "anchor": {
-        "x": 1.5256410256410273,
-        "y": 7.139730769230769
+        "x": 5.86296153846154,
+        "y": 2.325653846153847
       },
       "prevControl": {
-        "x": 1.2443814165589768,
-        "y": 7.136274056483067
+        "x": 5.583813510762845,
+        "y": 2.3362756945276417
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Left of Blue Depot"
+      "linkedName": "Front of Blue Right Bump"
     }
   ],
   "rotationTargets": [],
@@ -42,10 +42,10 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 0.0
+    "rotation": 180.0
   },
   "reversed": false,
-  "folder": "BlueStartLeftCollect",
+  "folder": null,
   "idealStartingState": {
     "velocity": 0,
     "rotation": 0.0

@@ -7,23 +7,26 @@ import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 
 public class IntakeSubsystem extends SubsystemBase 
 {
-    private final PWMSparkMax intakeMotor = new PWMSparkMax(1);
+    private final PWMSparkMax intakeMotor;
     
-    public IntakeSubsystem(){} 
+    public IntakeSubsystem(){
+
+      intakeMotor = new PWMSparkMax(1);
+    } 
 
     public void runIntake()
     {
-        intakeMotor.set(0.8);
+        intakeMotor.setVoltage(12);
     }
 
     public void reverseIntake()
     {
-        intakeMotor.set(-0.8);
+        intakeMotor.setVoltage(12);
     }
 
     public void stopIntake()
     {
-        intakeMotor.set(0);
+        intakeMotor.setVoltage(0);
     }
 
     @Override

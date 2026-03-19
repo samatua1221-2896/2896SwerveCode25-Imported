@@ -92,7 +92,7 @@ public RobotContainer(){
     // cancelling on release.
 
     //This controls the motor that is attached to the compression wheels
-    m_operatorJoystick.button(2).whileTrue(m_IntakeSubsystem.intakeCommand());
+    m_operatorJoystick.button(4).whileTrue(m_IntakeSubsystem.intakeCommand());
     m_operatorJoystick.button(8).whileTrue(m_IntakeSubsystem.reverseIntakeCommand());
 
     //This controls the motor that shoots the ball

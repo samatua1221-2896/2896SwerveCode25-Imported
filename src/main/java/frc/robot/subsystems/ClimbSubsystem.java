@@ -8,9 +8,12 @@ import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;;
 public class ClimbSubsystem extends SubsystemBase {
     
     //if made, change channel number
-   private final PWMSparkMax climbMotor = new PWMSparkMax(3);
+   private final PWMSparkMax climbMotor;
    
-   public ClimbSubsystem(){}
+   public ClimbSubsystem(){
+
+    climbMotor = new PWMSparkMax(3);
+   }
 
    public void runClimb()
    {

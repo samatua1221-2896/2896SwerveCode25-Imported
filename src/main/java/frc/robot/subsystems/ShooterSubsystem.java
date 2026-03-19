@@ -7,23 +7,29 @@ import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
 
 public class ShooterSubsystem extends SubsystemBase
 {
-    private final VictorSP shooterMotor = new VictorSP(0);
+    private final VictorSP shooterMotor;
 
-    public ShooterSubsystem(){} 
+    public ShooterSubsystem(){
+        shooterMotor = new VictorSP(0);
+
+    } 
 
     public void runShooter()
     {
-        shooterMotor.set(0.8);
+        shooterMotor.setVoltage(12);
+        System.out.println("Shooting");
     }
 
     public void reverseShooter()
     {
-        shooterMotor.set(-0.8);
+        shooterMotor.setVoltage(-12);
+        System.out.print("reversing");
     }
 
     public void stopShooter()
     {
-        shooterMotor.set(0);
+        shooterMotor.setVoltage(0);
+        System.out.print("Stopping");
     }
 
      @Override

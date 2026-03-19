@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.7466282051282063,
-        "y": 7.442064102564103
+        "x": 5.86296153846154,
+        "y": 2.325653846153847
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.317750596717829,
-        "y": 7.441129233312109
+        "x": 6.86296153846154,
+        "y": 2.3256538461538465
       },
       "isLocked": false,
-      "linkedName": "Back of Blue Left Trench"
+      "linkedName": "Front of Blue Right Bump"
     },
     {
       "anchor": {
-        "x": 1.5256410256410273,
-        "y": 7.139730769230769
+        "x": 7.479282051282052,
+        "y": 5.30247435897436
       },
       "prevControl": {
-        "x": 1.2443814165589768,
-        "y": 7.136274056483067
+        "x": 6.479282051282052,
+        "y": 5.30247435897436
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Left of Blue Depot"
+      "linkedName": "Blue Left Connect"
     }
   ],
   "rotationTargets": [],
@@ -45,10 +45,10 @@
     "rotation": 0.0
   },
   "reversed": false,
-  "folder": "BlueStartLeftCollect",
+  "folder": null,
   "idealStartingState": {
     "velocity": 0,
-    "rotation": 0.0
+    "rotation": 180.0
   },
   "useDefaultConstraints": true
 }

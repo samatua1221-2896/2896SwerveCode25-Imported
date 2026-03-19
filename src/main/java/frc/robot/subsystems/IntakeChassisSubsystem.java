@@ -8,20 +8,23 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class IntakeChassisSubsystem extends SubsystemBase {
 
-   private final PWMSparkMax chassisMotor = new PWMSparkMax(2);
+   private final PWMSparkMax chassisMotor;
     
-   public IntakeChassisSubsystem(){}
+   public IntakeChassisSubsystem(){
+
+    chassisMotor = new PWMSparkMax(2);
+   }
 
    public void dropChassis()
    {
         // double check the voltage of this, don't want to ruin the intake when testing the motor
-        chassisMotor.setVoltage(12);
+        chassisMotor.setVoltage(-4);
    }
 
   public void liftChassis()
    {
         // double check the voltage of this, don't want to ruin the intake when testing the motor
-        chassisMotor.setVoltage(-12);
+        chassisMotor.setVoltage(4);
    }
 
    public void stopChassis()
