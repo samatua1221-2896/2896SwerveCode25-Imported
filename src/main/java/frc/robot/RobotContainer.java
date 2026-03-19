@@ -110,8 +110,10 @@ public RobotContainer(){
   
   
   SwerveInputStream driveAngularvelocity = SwerveInputStream.of(drivebase.getSwervedrive(),
-                                                           () -> m_driverController.getLeftY() * -1,
-                                                           () -> m_driverController.getLeftX() * -1)
+                                                          //VERY IMPORTANT: CHANGED THIS Y TO X 3/18 NIGHT, NEED TO CHECK IF THIS WORKS WITH THE DRIVE
+                                                           () -> m_driverController.getLeftX() * -1,
+                                                          //VERY IMPORTANT: CHANGED THIS X TO Y 3/18 NIGHT, NEED TO CHECK IF THIS WORKS WITH THE DRIVE
+                                                           () -> m_driverController.getLeftY() * -1)
                                                           .withControllerRotationAxis(m_driverController::getRightX)
                                                           .deadband(OperatorConstants.DEADBAND)
                                                           .scaleTranslation(0.8)
@@ -125,13 +127,13 @@ Command driveFieldOrientedDirectAngle = drivebase.driveFieldOriented(driveDirect
 
 Command driveFieldOrientedAngularVelocity = drivebase.driveFieldOriented(driveAngularvelocity);
 
-/*
+
 
 //Remove comment code in order to install simulation drive, as of 10/16/25 does not work, is supposed to be sim versions of all the above block of code
 
 SwerveInputStream driveAngularvelocitySim = SwerveInputStream.of(drivebase.getSwervedrive(),
-                                                           () -> -m_driverController.getLeftY(),
-                                                           () -> -m_driverController.getLeftX())
+                                                           () -> -m_driverController.getLeftX(),
+                                                           () -> -m_driverController.getLeftY())
                                                           .withControllerRotationAxis(() -> m_driverController.getRawAxis(2))
                                                           .deadband(OperatorConstants.DEADBAND)
                                                           .scaleTranslation(0.8)
@@ -148,7 +150,7 @@ SwerveInputStream driveDirectAngleSim = driveAngularvelocitySim.copy()
                                                                 .headingWhile(true);
 
 Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDirectAngleSim);
-*/
+
 
 
   /**                                                         
