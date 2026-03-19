@@ -37,8 +37,6 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
-
-  
   // The robot's subsystems and commands are defined here...
 
   //Example subsystem is the example already given in YAGSL code; .java file inside of subsystem folder
@@ -78,8 +76,7 @@ public RobotContainer(){
   // Do all other initialization
   configureButtonBindings();
 
-  //Adding this line of code according to AI, need to check if this will actually
-  //make the robot move; robot did not move as of last test 3/18 morning
+  //code now works with this command below
   drivebase.setDefaultCommand(driveFieldOrientedAngularVelocity);
   }
   
