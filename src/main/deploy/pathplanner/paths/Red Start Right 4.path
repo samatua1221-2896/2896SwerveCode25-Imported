@@ -3,29 +3,45 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 7.7982184655396605,
-        "y": 4.0526918075422635
+        "x": 10.642153846153846,
+        "y": 5.32573076923077
       },
       "prevControl": null,
       "nextControl": {
-        "x": 8.671093762086194,
-        "y": 4.420636234533201
+        "x": 10.811405789991813,
+        "y": 4.998619703307003
       },
       "isLocked": false,
-      "linkedName": "Middle of Field Blue"
+      "linkedName": "Front of Red Right Bump"
     },
     {
       "anchor": {
-        "x": 5.86296153846154,
-        "y": 2.325653846153847
+        "x": 9.886320512820514,
+        "y": 3.6628974358974364
       },
       "prevControl": {
-        "x": 5.583813510762845,
-        "y": 2.3362756945276417
+        "x": 10.263171342038502,
+        "y": 4.524390040361712
+      },
+      "nextControl": {
+        "x": 9.468875071004318,
+        "y": 2.708604296518532
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.711871794871795,
+        "y": 2.8605512820512833
+      },
+      "prevControl": {
+        "x": 9.289663721937373,
+        "y": 2.9330236736194046
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Front of Blue Right Bump"
+      "linkedName": "Red Left Collect"
     }
   ],
   "rotationTargets": [],
@@ -45,7 +61,7 @@
     "rotation": 180.0
   },
   "reversed": false,
-  "folder": "BlueStartRightCollect",
+  "folder": "RedStartRightCollect",
   "idealStartingState": {
     "velocity": 0,
     "rotation": 0.0

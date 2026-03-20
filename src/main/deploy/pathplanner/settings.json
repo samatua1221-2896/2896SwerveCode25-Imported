@@ -1,9 +1,11 @@
 {
-  "robotWidth": 0.9,
-  "robotLength": 0.9,
+  "robotWidth": 0.85,
+  "robotLength": 0.85,
   "holonomicMode": true,
   "pathFolders": [
-    "BlueStartLeftCollect"
+    "BlueStartLeftCollect",
+    "BlueStartRightCollect",
+    "RedStartRightCollect"
   ],
   "autoFolders": [],
   "defaultMaxVel": 4.5,
@@ -31,7 +33,7 @@
   "bumperOffsetX": 0.0,
   "bumperOffsetY": 0.0,
   "robotFeatures": [
-    "{\"name\":\"Shooter\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":-0.35,\"y\":0.0},\"size\":{\"width\":0.45,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.06,\"filled\":false}}",
-    "{\"name\":\"Rectangle\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":0.44,\"y\":0.0},\"size\":{\"width\":0.85,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.02,\"filled\":true}}"
+    "{\"name\":\"Shooter\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":-0.35,\"y\":0.0},\"size\":{\"width\":0.42,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.06,\"filled\":false}}",
+    "{\"name\":\"Intake\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":0.44,\"y\":0.0},\"size\":{\"width\":0.76,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.02,\"filled\":true}}"
   ]
 }

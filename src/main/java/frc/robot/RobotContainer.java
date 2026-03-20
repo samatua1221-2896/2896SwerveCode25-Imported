@@ -21,6 +21,7 @@ import com.pathplanner.lib.auto.AutoBuilder;
 import com.pathplanner.lib.auto.NamedCommands;
 import com.pathplanner.lib.commands.PathPlannerAuto;
 
+import edu.wpi.first.wpilibj.RobotBase;
 //import edu.wpi.first.wpilibj.RobotBase;
 //import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -76,8 +77,10 @@ public RobotContainer(){
   // Do all other initialization
   configureButtonBindings();
 
-  //code now works with this command below
-  drivebase.setDefaultCommand(driveFieldOrientedAngularVelocity);
+
+  drivebase.setDefaultCommand(driveFieldOrientedDirectAngle);
+
+ 
   }
   
   public void configureButtonBindings() {
@@ -110,10 +113,8 @@ public RobotContainer(){
   
   
   SwerveInputStream driveAngularvelocity = SwerveInputStream.of(drivebase.getSwervedrive(),
-                                                          //VERY IMPORTANT: CHANGED THIS Y TO X 3/18 NIGHT, NEED TO CHECK IF THIS WORKS WITH THE DRIVE
-                                                           () -> m_driverController.getLeftX() * -1,
-                                                          //VERY IMPORTANT: CHANGED THIS X TO Y 3/18 NIGHT, NEED TO CHECK IF THIS WORKS WITH THE DRIVE
-                                                           () -> m_driverController.getLeftY() * -1)
+                                                           () -> m_driverController.getLeftY() * -1,
+                                                           () -> m_driverController.getLeftX() * -1)
                                                           .withControllerRotationAxis(m_driverController::getRightX)
                                                           .deadband(OperatorConstants.DEADBAND)
                                                           .scaleTranslation(0.8)
@@ -127,8 +128,8 @@ Command driveFieldOrientedDirectAngle = drivebase.driveFieldOriented(driveDirect
 
 Command driveFieldOrientedAngularVelocity = drivebase.driveFieldOriented(driveAngularvelocity);
 
-
-
+/* 
+//Right here
 //Remove comment code in order to install simulation drive, as of 10/16/25 does not work, is supposed to be sim versions of all the above block of code
 
 SwerveInputStream driveAngularvelocitySim = SwerveInputStream.of(drivebase.getSwervedrive(),
@@ -151,8 +152,8 @@ SwerveInputStream driveDirectAngleSim = driveAngularvelocitySim.copy()
 
 Command driveFieldOrientedDirectAngleSim = drivebase.driveFieldOriented(driveDirectAngleSim);
 
-
-
+//End here
+*/
   /**                                                         
    * Use this method to define your trigger->command mappings. Triggers can be created via the
    * {@link Trigger#Trigger(java.util.function.BooleanSupplier)} constructor with an arbitrary

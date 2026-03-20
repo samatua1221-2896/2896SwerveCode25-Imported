@@ -1,0 +1,86 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 14.66551282051282,
+        "y": 7.453692307692307
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 14.880415968398323,
+        "y": 7.32595571532778
+      },
+      "isLocked": false,
+      "linkedName": "Front of Red Collection"
+    },
+    {
+      "anchor": {
+        "x": 10.804948717948719,
+        "y": 7.453692307692307
+      },
+      "prevControl": {
+        "x": 11.410401651296555,
+        "y": 7.716558573159532
+      },
+      "nextControl": {
+        "x": 9.535924222035044,
+        "y": 6.902726722006378
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 10.397961538461539,
+        "y": 4.651294871794871
+      },
+      "prevControl": {
+        "x": 10.637068207298636,
+        "y": 5.358236400017663
+      },
+      "nextControl": {
+        "x": 10.144028722257888,
+        "y": 3.9005184337055194
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 9.142115384615385,
+        "y": 3.965230769230769
+      },
+      "prevControl": {
+        "x": 9.385089128927888,
+        "y": 4.195290801511497
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Middle of Field Red"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.5,
+    "maxAcceleration": 3.5,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "reversed": false,
+  "folder": "RedStartRightCollect",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "useDefaultConstraints": true
+}

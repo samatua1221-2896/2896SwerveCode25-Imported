@@ -21,7 +21,7 @@
       },
       "prevControl": {
         "x": 6.419827117165302,
-        "y": 0.3433479790752818
+        "y": 0.34334797907528186
       },
       "nextControl": {
         "x": 7.312431791221827,
@@ -57,7 +57,7 @@
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Middle of Field"
+      "linkedName": "Middle of Field Blue"
     }
   ],
   "rotationTargets": [
@@ -89,7 +89,7 @@
     "rotation": 0.0
   },
   "reversed": false,
-  "folder": null,
+  "folder": "BlueStartRightCollect",
   "idealStartingState": {
     "velocity": 0,
     "rotation": 0.0
