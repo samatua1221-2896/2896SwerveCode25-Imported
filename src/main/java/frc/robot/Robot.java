@@ -10,6 +10,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 
+import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.cscore.UsbCamera;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import edu.wpi.first.wpilibj2.command.Command;
@@ -62,6 +65,11 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotInit() {
+
+    UsbCamera camera = CameraServer.startAutomaticCapture();
+    camera.setResolution(320, 240);
+    camera.setFPS(15);
+
     autoChooser.setDefaultOption("RedStartMiddle", "RedStartMiddle");
     autoChooser.addOption("BlueStartMiddle", "BlueStartMiddle");
     autoChooser.addOption("RedStartRight", "RedStartRight");
